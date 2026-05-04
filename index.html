@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto: Dignidad en Acción</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5aa',
+                            600: '#0299c7',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans min-h-screen flex flex-col md:flex-row">
+
+    <!-- Navegación lateral (simulando Google Sites) -->
+    <nav class="bg-brand-900 text-white w-full md:w-64 flex-shrink-0 md:min-h-screen p-6 shadow-xl z-10">
+        <div class="mb-8 text-center md:text-left">
+            <h1 class="text-2xl font-bold tracking-wider mb-2"><i class="fa-solid fa-earth-americas mr-2"></i>DIGNIDAD</h1>
+            <p class="text-brand-100 text-sm font-light uppercase tracking-widest">En Acción</p>
+        </div>
+        
+        <ul class="space-y-2 flex flex-col">
+            <li>
+                <button onclick="openTab('referentes')" class="nav-btn w-full text-left px-4 py-3 rounded-lg bg-brand-600 transition duration-200 flex items-center shadow-md">
+                    <i class="fa-solid fa-star mr-3 w-5 text-center"></i> Referentes de valentía
+                </button>
+            </li>
+            <li>
+                <button onclick="openTab('derechos')" class="nav-btn w-full text-left px-4 py-3 rounded-lg hover:bg-brand-600 transition duration-200 flex items-center opacity-70 hover:opacity-100">
+                    <i class="fa-solid fa-scale-balanced mr-3 w-5 text-center"></i> Derechos humanos
+                </button>
+            </li>
+            <li>
+                <button onclick="openTab('infancia')" class="nav-btn w-full text-left px-4 py-3 rounded-lg hover:bg-brand-600 transition duration-200 flex items-center opacity-70 hover:opacity-100">
+                    <i class="fa-solid fa-child mr-3 w-5 text-center"></i> Infancia vulnerable
+                </button>
+            </li>
+            <li>
+                <button onclick="openTab('problemas')" class="nav-btn w-full text-left px-4 py-3 rounded-lg hover:bg-brand-600 transition duration-200 flex items-center opacity-70 hover:opacity-100">
+                    <i class="fa-solid fa-triangle-exclamation mr-3 w-5 text-center"></i> Problemas actuales
+                </button>
+            </li>
+            <li>
+                <button onclick="openTab('activista')" class="nav-btn w-full text-left px-4 py-3 rounded-lg hover:bg-brand-600 transition duration-200 flex items-center opacity-70 hover:opacity-100">
+                    <i class="fa-solid fa-bullhorn mr-3 w-5 text-center"></i> Mi activista
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Área de contenido principal -->
+    <main class="flex-1 p-6 md:p-12 max-w-6xl mx-auto w-full">
+        
+        <!-- PÁGINA 1: Referentes de valentía (DÍA 1 RESUELTO) -->
+        <section id="referentes" class="tab-content active">
+            <header class="mb-8 border-b-2 border-brand-100 pb-4">
+                <span class="bg-brand-100 text-brand-900 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide mb-3 inline-block">Día 1</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Personas que cambian el mundo</h2>
+            </header>
+
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 mb-8 leading-relaxed">
+                <p class="mb-4 text-lg text-gray-700">Las injusticias existen, pero hay personas que deciden actuar. Su valentía demuestra que una sola decisión puede cambiar la realidad.</p>
+                
+                <h3 class="text-xl font-bold text-brand-900 mt-8 mb-4 border-l-4 border-brand-500 pl-3">1. Tabla de Ejemplos</h3>
+                
+                <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-50 text-gray-800 border-b border-gray-200">
+                                <th class="p-4 font-semibold w-1/4">Injusticia</th>
+                                <th class="p-4 font-semibold w-1/3">Decisión</th>
+                                <th class="p-4 font-semibold">Consecuencia</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-brand-50 transition">
+                                <td class="p-4 align-top">
+                                    <span class="font-bold text-sm block mb-1">Malala Yousafzai</span>
+                                    Prohibición de la educación para las niñas por los talibanes.
+                                </td>
+                                <td class="p-4 align-top">Defender públicamente el derecho a la educación a pesar de las amenazas.</td>
+                                <td class="p-4 align-top">Sobrevivió a un ataque, ganó el Nobel de la Paz y creó un fondo global para la educación.</td>
+                            </tr>
+                            <tr class="hover:bg-brand-50 transition bg-gray-50/50">
+                                <td class="p-4 align-top">
+                                    <span class="font-bold text-sm block mb-1">Iqbal Masih</span>
+                                    Vendido como esclavo infantil para tejer alfombras en malas condiciones.
+                                </td>
+                                <td class="p-4 align-top">Escapar a los 10 años y denunciar a las mafias de la esclavitud infantil.</td>
+                                <td class="p-4 align-top">Ayudó a liberar a miles de niños esclavos e impulsó leyes contra el trabajo infantil.</td>
+                            </tr>
+                            <tr class="hover:bg-brand-50 transition">
+                                <td class="p-4 align-top">
+                                    <span class="font-bold text-sm block mb-1">Nujood Ali (Yemen)</span>
+                                    Obligada a casarse a los 10 años sufriendo abusos.
+                                </td>
+                                <td class="p-4 align-top">Escapar de su marido y exigir sola el divorcio ante un juez.</td>
+                                <td class="p-4 align-top">Logró el primer divorcio infantil de su país, animando a otras niñas a defenderse.</td>
+                            </tr>
+                            <tr class="hover:bg-brand-50 transition bg-gray-50/50">
+                                <td class="p-4 align-top">
+                                    <span class="font-bold text-sm block mb-1">Nelson Mandela</span>
+                                    El "Apartheid", un sistema racista que quitaba derechos a la población negra en Sudáfrica.
+                                </td>
+                                <td class="p-4 align-top">Liderar la resistencia pacífica y pasar 27 años en prisión por sus ideas.</td>
+                                <td class="p-4 align-top">Logró el fin del Apartheid y fue el primer presidente negro de su país.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="text-xl font-bold text-brand-900 mt-10 mb-4 border-l-4 border-brand-500 pl-3">2. Reflexión</h3>
+                
+                <div class="space-y-6">
+                    <div class="bg-gray-50 p-5 rounded-lg border border-gray-100">
+                        <h4 class="font-bold text-gray-900 mb-2"><i class="fa-solid fa-circle-question text-brand-500 mr-2"></i>¿Qué tienen en común?</h4>
+                        <p class="text-gray-700">Todos sufrieron injusticias graves, pero en lugar de callar, decidieron enfrentarse al problema y defender la dignidad humana.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-5 rounded-lg border border-gray-100">
+                        <h4 class="font-bold text-gray-900 mb-2"><i class="fa-solid fa-circle-question text-brand-500 mr-2"></i>¿Qué riesgo asumieron?</h4>
+                        <p class="text-gray-700">Asumieron grandes riesgos como perder su libertad, sufrir rechazo o incluso poner sus vidas en peligro.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-5 rounded-lg border border-gray-100">
+                        <h4 class="font-bold text-gray-900 mb-2"><i class="fa-solid fa-circle-question text-brand-500 mr-2"></i>¿Por qué su acción fue importante?</h4>
+                        <p class="text-gray-700">Porque su valentía hizo visible el problema. Rompieron el silencio e inspiraron a otros a cambiar leyes injustas y salvar vidas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PÁGINAS PLACEHOLDER PARA LOS PRÓXIMOS DÍAS -->
+        <section id="derechos" class="tab-content">
+            <header class="mb-8 border-b-2 border-brand-100 pb-4">
+                <span class="bg-brand-100 text-brand-900 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide mb-3 inline-block">Día 2</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Derechos Humanos</h2>
+            </header>
+            
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 mb-8 leading-relaxed">
+                <!-- LECTURA -->
+                <p class="mb-4 text-lg text-gray-700">Los derechos humanos protegen nuestra dignidad, sin importar el origen. Nacieron a lo largo del tiempo para responder a diferentes injusticias.</p>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-8 inline-block">
+                    <p class="font-bold text-brand-900 mb-2">Características principales:</p>
+                    <ul class="list-disc pl-6 text-gray-700 space-y-1">
+                        <li>Son <strong>universales</strong>.</li>
+                        <li><strong>No se pueden quitar</strong> (son inalienables).</li>
+                        <li>Son <strong>iguales</strong> para todos.</li>
+                    </ul>
+                </div>
+                
+                <!-- TAREA: 3 "Diapositivas" -->
+                <h3 class="text-xl font-bold text-brand-900 mt-4 mb-6 border-l-4 border-brand-500 pl-3">Mis 3 "Diapositivas": Valores Fundamentales</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                    <!-- Diapositiva 1: Libertad -->
+                    <div class="bg-brand-50 p-6 rounded-xl border border-brand-100 shadow-sm hover:shadow-md transition">
+                        <i class="fa-solid fa-dove text-4xl text-brand-500 mb-4 block text-center"></i>
+                        <h4 class="text-xl font-bold text-brand-900 mb-3 text-center">Libertad</h4>
+                        <p class="text-gray-700 text-sm text-center">Es el derecho a tomar nuestras propias decisiones, opinar y expresarnos libremente, siempre respetando a los demás.</p>
+                    </div>
+                    <!-- Diapositiva 2: Igualdad -->
+                    <div class="bg-brand-50 p-6 rounded-xl border border-brand-100 shadow-sm hover:shadow-md transition">
+                        <i class="fa-solid fa-scale-balanced text-4xl text-brand-500 mb-4 block text-center"></i>
+                        <h4 class="text-xl font-bold text-brand-900 mb-3 text-center">Igualdad</h4>
+                        <p class="text-gray-700 text-sm text-center">Todos valemos lo mismo sin importar nuestro origen. Merecemos las mismas oportunidades y el mismo respeto de la ley.</p>
+                    </div>
+                    <!-- Diapositiva 3: Solidaridad -->
+                    <div class="bg-brand-50 p-6 rounded-xl border border-brand-100 shadow-sm hover:shadow-md transition">
+                        <i class="fa-solid fa-handshake-angle text-4xl text-brand-500 mb-4 block text-center"></i>
+                        <h4 class="text-xl font-bold text-brand-900 mb-3 text-center">Solidaridad</h4>
+                        <p class="text-gray-700 text-sm text-center">Es el deber de ayudarnos mutuamente, especialmente a los más necesitados, para construir un mundo mejor y más justo.</p>
+                    </div>
+                </div>
+
+                <!-- PREGUNTA -->
+                <h3 class="text-xl font-bold text-brand-900 mt-10 mb-4 border-l-4 border-brand-500 pl-3">Reflexión: ¿Por qué son universales?</h3>
+                <div class="bg-gray-50 p-5 rounded-lg border border-gray-100 mb-10">
+                    <p class="text-gray-700">Son universales porque <strong>pertenecen a todos por el simple hecho de nacer</strong>. No dependen de tu país, creencias o forma de ser; son parte de nuestra humanidad.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="infancia" class="tab-content">
+            <header class="mb-8 border-b-2 border-brand-100 pb-4">
+                <span class="bg-brand-100 text-brand-900 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wide mb-3 inline-block">Día 3</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Infancia vulnerada</h2>
+            </header>
+            
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 mb-8 leading-relaxed">
+                <!-- LECTURA -->
+                <p class="mb-4 text-lg text-gray-700">Muchos niños no disfrutan de sus derechos: no van al colegio, trabajan o corren peligro. Todos merecen educación, protección y cuidado.</p>
+                
+                <div class="bg-brand-50 p-4 rounded-lg border border-brand-100 mb-8 inline-block">
+                    <p class="font-bold text-brand-900 flex items-center">
+                        <i class="fa-solid fa-key mr-2 text-brand-500"></i> La educación es la clave para su futuro.
+                    </p>
+                </div>
+                
+                <!-- TAREA -->
+                <h3 class="text-xl font-bold text-brand-900 mt-4 mb-6 border-l-4 border-brand-500 pl-3">Caso analizado</h3>
+                
+                <div class="bg-gray-50 border border-gray-200 rounded-xl p-6 mb-6">
+                    <h4 class="font-bold text-lg text-brand-900 mb-4 border-b border-gray-200 pb-2">Caso elegido: Trabajo infantil en lugar de escuela</h4>
+                    
+                    <div class="space-y-5">
+                        <div>
+                            <h5 class="font-bold text-gray-900 flex items-center mb-1"><i class="fa-solid fa-circle-exclamation text-brand-500 w-5"></i> ¿Qué ocurre?</h5>
+                            <p class="text-gray-700 ml-6">Muchos niños tienen que trabajar para ayudar a sus familias y no pueden asistir al colegio.</p>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-gray-900 flex items-center mb-1"><i class="fa-solid fa-ban text-brand-500 w-5"></i> ¿Qué derecho se vulnera?</h5>
+                            <p class="text-gray-700 ml-6">El derecho a la <strong>educación</strong>, al <strong>juego</strong> y a la <strong>protección contra la explotación</strong>.</p>
+                        </div>
+
+                        <div>
+                            <h5 class="font-bold text-gray-900 flex items-center mb-1"><i class="fa-solid fa-book-open text-brand-500 w-5"></i> ¿Por qué la educación es importante?</h5>
+                            <p class="text-gray-700 ml-6">Porque les permite salir de la pobreza, conseguir mejores trabajos, defender sus derechos y elegir su propio camino.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="problemas" class="tab-content">
+            <header class="mb-8 border-b-2 border-brand-100 pb-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Problemas actuales</h2>
+            </header>
+            <div class="bg-white p-12 text-center rounded-2xl shadow-sm border border-gray-100">
+                <i class="fa-solid fa-person-digging text-6xl text-gray-300 mb-4"></i>
+                <h3 class="text-xl text-gray-600">Página en construcción</h3>
+                <p class="text-gray-500 mt-2">Aquí irá el trabajo de los próximos días.</p>
+            </div>
+        </section>
+
+        <section id="activista" class="tab-content">
+            <header class="mb-8 border-b-2 border-brand-100 pb-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Mi activista</h2>
+            </header>
+            <div class="bg-white p-12 text-center rounded-2xl shadow-sm border border-gray-100">
+                <i class="fa-solid fa-person-digging text-6xl text-gray-300 mb-4"></i>
+                <h3 class="text-xl text-gray-600">Página en construcción</h3>
+                <p class="text-gray-500 mt-2">Aquí irá el trabajo final del proyecto.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        let swcount = 0;
+        function openTab(tabName) {
+            // Ocultar todos los contenidos
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // Resetear estilos de los botones
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-600', 'shadow-md');
+                btn.classList.add('opacity-70');
+            });
+
+            // Mostrar el tab actual
+            document.getElementById(tabName).classList.add('active');
+
+            // Resaltar el botón clickeado
+            const clickedBtn = event.currentTarget;
+            clickedBtn.classList.remove('opacity-70');
+            clickedBtn.classList.add('bg-brand-600', 'shadow-md', 'opacity-100');
+            
+            swcount += 1;
+            console.log("btn switch #"+swcount);
+
+        }
+    </script>
+</body>
+</html>
